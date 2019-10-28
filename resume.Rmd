@@ -1,0 +1,92 @@
+---
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cerulean
+---
+
+## Fangming JIN
+
+100 Haven Ave, Tower 3, Apt 9H, New York, New York 10032
+
+(+1)917-213-3514 fj2269@cumc.columbia.edu
+
+### EDUCATION	
+
+---
+
+**Columbia University, Mailman School of Public Health, New York (Aug2019 - Present)**
+
+MS in Biostatistics
+
+**China Agricultural University, School of Agronomy, Beijing (Aug2015 - Jul2019)** 
+
+B.A. in Agronomy, Major GPA:3.68/4.0 (top 13%),WES credential evaluations:3.77/4.0
+
+***Honors and Awards: ***Excellent Student Scholarship in 2018(13%), The Second Prize Scholarship in 2016 and 2018(13%), The Third Prize Scholarship in 2017(15%)
+
+***Main Courses: ***Probability Theory and Mathematical Statistics, Fundamentals of Computers, Trial Design and Biostatistics,Advanced Math, Linear Algebra, C++, Bioinformatics
+
+### RESEARCH EXPERIENCE   
+
+---
+
+**Genome-wide analysis of gliadin in wheat | CAU | Research Assistant (Oct2018 - Jul2019)**
+
+Advisor: Professor Weilong Guo, School of Agronomy, China Agricultural University
+
+*1.Investigated the position and sequence of potential gliadin in Chinese Spring with Blast and Bedtools*
+
+*2.Filtered gliadin sequence through domain identification and phylogenetic analysis. Visualized position of glaidin in chromosome with R*
+
+*3.Established fingerprint of 15 wheat species based on gliadin sequence in Chinese Spring*
+
+*4.Analyzed gliadin sequence of wild emmer based on genomic synteny between Chinese Spring and wild emmer*
+
+**Influence of Fertilizer Treatment on Winter Wheat-Corn Rotation | CAU | Research Assistant (Apr2018 - Sep2018)**
+
+Advisor: Professor Hailin Zhang, School of Agronomy, China Agricultural University
+
+*1.Retrieved more than 100 papers from Web of Science and China Knowledge Resource Integrated Database*
+
+*2.Filtered a dataset of 400 observations from papers according to selection criteria; wrote scripts in R to simplify data processing*
+
+*3.Analyzed the data based on Meta-analysis; visualized the result with R and Sigmaplot*
+
+*4.Created a fundamental basis for the future study on the optimization of planting pattern*
+
+**Interaction between MADS-box Gene and HMW Glutenin Promoter | CAU | Research Assistant (Apr2017 - Apr2018)**
+
+Advisor: Professor Yingyin Yao, School of Agronomy, China Agricultural University
+
+*1.Screened specifically expressed MADS-box gene through web crawling*
+
+*2.Produced protein of MADS-box through reverse transcription, PCR and genetic engineering technology*
+
+*3.Verified the interaction between MADS-box protein and HMW glutenin promoter through EMAS experiment*
+
+*4.Proved the influence of MADS-box gene expression on the level of HMW glutenin, provided a new method to breeding of wheat nutrition quality*
+
+### ACTIVITIES	　            
+
+---
+
+**Volunteer activity | CAU | Team Member (Oct2015 - Oct2016)**
+
+*Updated dynamics of different university aspects, including education and health care, on the official accounts of CAU*
+
+**Professional practice | CAU | Team Member (Sep2018)**
+
+*Investigated the utilization of agricultural and household waste in Wuqiao Country, Hebei Province through a questionnaire survey and literature review; brought up a viable scheme on waste utilization of Wuqiao Country*
+
+### SKILLS                                                                                                                      
+
+---
+
+*Programming: R, Python, C++, Linux*
+
+*Office Applications: Microsoft Office, Metawin, Sigmaplot, BLAST, Getdata, ClustalW, TreeviewX*
+
+*Good knowledge and experiment skills in molecular biology, chemistry and agriculture*
+

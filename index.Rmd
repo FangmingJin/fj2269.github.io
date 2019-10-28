@@ -1,0 +1,62 @@
+---
+title: "Fangming's Personal Website"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cerulean
+---
+
+## Basic Information
+
+<img src="photo/photo.jpg" style="width:50%">
+
+Last name: Jin
+
+First name: Fangming
+
+Gender: female
+
+Data of birth: 05/14/1997
+
+Country: China
+
+Hometown: Zhengzhou, Henan
+
+Phone number: +1 917-213-3514
+
+Alternative number: +86 18301621629
+              
+Permanent address: No.338, Gongren South Road, Zhongyuan District, Zhengzhou, Henan, China
+                   
+Temporary Address: 100 Haven Avenue, Tower 3, Apt 9H, New York, NY 10032, USA
+
+## Resume
+
+This is my [Resume](resume.html)
+                   
+## Self introduction
+
+Nice to meet you! My name is Fangming Jin. I am a girl from central province of China.
+
+
+This is my hometown:
+
+<img src="photo/erqi.JPG" style="width:60%">
+
+![](photo/zhengzhou.JPG)
+
+(Recommend you to eat mutton stewed noodle and Hu maeuntang soup if you visit Henan)
+
+I spent 4 years in Beijing to pursue my undergraduate degree, which is memorable.
+
+<img src="photo/Beijing.jpg" style="width:30%">
+
+There is a lot of beautiful gingko trees in campus of CAU. I immersed in study and research related to plant and agriculture, and get in touch with biostatistics in this process.
+
+That is why I am here: 
+
+<img src="photo/columbia.JPG" style="width:30%">
+
+The road goes ever on and on, and I am still on my way, with my dream. Contributing to field of public health and trying to build a healthier world!
+
