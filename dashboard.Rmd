@@ -1,0 +1,80 @@
+---
+title: "dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(viridis)
+library(p8105.datasets)
+library(plotly)
+```
+
+```{r}
+data(ny_noaa)
+ny_noaa = 
+  ny_noaa %>% 
+  janitor::clean_names() %>%
+  separate(date, c("year","month","day"), sep = "-") %>%
+  arrange(year, month, day) %>%
+  filter(year == 2008)
+```
+
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+ny_noaa %>%
+  mutate(tmin = as.numeric(tmin),
+         tmax = as.numeric(tmax)) %>%
+  group_by(month, day) %>%
+  summarize(mean_tmax = mean(tmax, na.rm = TRUE),
+            mean_tmin = mean(tmin, na.rm = TRUE)) %>%
+  drop_na() %>%
+  ungroup() %>%
+  mutate(mean_tmin = round(mean_tmin,2),
+         mean_tmax= round(mean_tmax,2)) %>%
+  mutate(text_label = str_c("tmin: $", mean_tmin, '\ntmax: ', mean_tmax, 'mm', "\ndata: ", month, day)) %>% 
+  plot_ly(
+    x = ~mean_tmin, y = ~mean_tmax, type = "scatter", mode = "markers",
+    color = ~month, text = ~text_label,alpha = 0.8) %>%
+  layout(title="Relationship between tmin and tmax in 2018, New York State", xaxis = list(title = "tmin"), yaxis = list(title = "tmax"))
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+ny_noaa %>% 
+  mutate(tmin = as.numeric(tmin),
+         tmax = as.numeric(tmax)) %>%
+  group_by(month) %>%
+  summarize(mean_tmax = round(mean(tmax, na.rm = TRUE),2),
+            mean_tmin = round(mean(tmin, na.rm = TRUE),2)) %>%
+  plot_ly(
+    x = ~month, y = ~mean_tmax, type = "scatter", name = 'tmax', mode = "lines", color = "orange", alpha = 0.8) %>% 
+  add_trace(y = ~mean_tmin, name = 'tmin', name = 'tmin', mode = 'lines', color = "blue", alpha = 0.8) %>%
+  layout(title="monthly mean tmin and tmax of 2018 in New York State", yaxis = list(title = "temperature"))
+```
+
+### Chart C
+
+```{r}
+ny_noaa %>% 
+  group_by(month) %>%
+  summarize(mean_prcp = mean(prcp, na.rm = TRUE)) %>%
+  ungroup() %>%
+  mutate(mean_prcp = round(mean_prcp, 2),
+         month = as.factor(month)) %>%
+  plot_ly(x = ~month, y = ~mean_prcp, color = ~month, type = "bar") %>%
+  layout(title="monthly mean percipitation of 2018 in New York State", yaxis = list(title = "average percipitation"))
+```
