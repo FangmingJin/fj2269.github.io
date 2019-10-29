@@ -9,6 +9,8 @@ navbar:
       href: mailto:fj2269@cumc.columbia.edu
     - icon: fa-github fa-lg
       href: http://github.com/FangmingJin/
+    - text: "Linkedin"
+      href: https://www.linkedin.com/in/fangming-jin-9803ba197/
 output:
   html_document:
     theme: journal

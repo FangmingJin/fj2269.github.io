@@ -41,7 +41,7 @@ ny_noaa %>%
   ungroup() %>%
   mutate(mean_tmin = round(mean_tmin,2),
          mean_tmax= round(mean_tmax,2)) %>%
-  mutate(text_label = str_c("tmin: $", mean_tmin, '\ntmax: ', mean_tmax, 'mm', "\ndata: ", month, day)) %>% 
+  mutate(text_label = str_c("tmin: ", mean_tmin, '\ntmax: ', mean_tmax, "\ndata: ", month,"/", day)) %>% 
   plot_ly(
     x = ~mean_tmin, y = ~mean_tmax, type = "scatter", mode = "markers",
     color = ~month, text = ~text_label,alpha = 0.8) %>%
@@ -60,9 +60,11 @@ ny_noaa %>%
   group_by(month) %>%
   summarize(mean_tmax = round(mean(tmax, na.rm = TRUE),2),
             mean_tmin = round(mean(tmin, na.rm = TRUE),2)) %>%
+  mutate(text_label1 = str_c("month: ", month, '\ntmax: ', mean_tmax),
+         text_label2 = str_c("month: ", month, '\ntmin: ', mean_tmin)) %>% 
   plot_ly(
-    x = ~month, y = ~mean_tmax, type = "scatter", name = 'tmax', mode = "lines", color = "orange", alpha = 0.8) %>% 
-  add_trace(y = ~mean_tmin, name = 'tmin', name = 'tmin', mode = 'lines', color = "blue", alpha = 0.8) %>%
+    x = ~month, y = ~mean_tmax, type = "scatter", name = 'tmax', mode = "lines", color = "orange", text = ~text_label1, alpha = 0.8) %>% 
+  add_trace(y = ~mean_tmin, name = 'tmin', name = 'tmin', mode = 'lines', color = "blue", text = ~text_label2, alpha = 0.8) %>%
   layout(title="monthly mean tmin and tmax of 2018 in New York State", yaxis = list(title = "temperature"))
 ```
 
@@ -75,6 +77,7 @@ ny_noaa %>%
   ungroup() %>%
   mutate(mean_prcp = round(mean_prcp, 2),
          month = as.factor(month)) %>%
-  plot_ly(x = ~month, y = ~mean_prcp, color = ~month, type = "bar") %>%
+  mutate(text_label1 = str_c("month: ", month, '\npercipitation: ', mean_prcp)) %>% 
+  plot_ly(x = ~month, y = ~mean_prcp, color = ~month, type = "bar", text = ~text_label1) %>%
   layout(title="monthly mean percipitation of 2018 in New York State", yaxis = list(title = "average percipitation"))
 ```
